@@ -1,0 +1,10 @@
+Instructions to run Deploy.ps1 
+
+1. Open powershell on system and navigate to the directory
+    - use cd command to navigate to the directory where 'Deploy.ps1' is located
+2. As a pre-requisites, be ensure Docker is installed on the system and is running properly. Verify this by running 'docker --version' in powershell.
+    If installed, it will display the docker version.
+3. Once navigating to directory containing 'Deploy.ps1' and Docker is installed, run the script by executing the following, 
+    .\Deploy.ps1
+4. The output of each step will be printed on the PowerShell console. It will run automated tests, build a Docker image and deploy and run the image locally.
+5. Resolve any errors encountered during script execution and rerun the script. Common issues could include missing dependencies, incorrect docker configuration, or permission issues.

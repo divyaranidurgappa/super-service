@@ -1,0 +1,28 @@
+Infrastructure implementation details:
+
+To address the requirements outlined in the assessment, I would set up Kubernetes cluster on AWS cloud provider with the following components and configuration.
+
+1. Hosting provider: 
+    I would select a cloud provider that offers robust kubernetes services such as Amazon Elastic Kubernetes service (EKS). It offers managed kubernetes services 
+    which simplifies cluster management and provides scalability.
+
+2. Hosting web services: 
+    The Kubernetes cluster would host the web services using Kubernetes Pods and Services. These services would expose endpoints to the internet using 
+    either a LoadBalancer service type or an Ingress controller, depending on the specific requirements and preferences.
+
+3. Connectivity Monitoring and Notification: 
+    I would configure monitoring and alerting using tools like Prometheus and Grafana (or cloudwatch). Alerts would be set up to notify the support team 
+    via email, Slack, or other communication channels if connectivity to the internal assets is lost. This can be achieved by monitoring the health and 
+    availability of the web services that interact with the internal systems.
+
+4. Automated Deployment: 
+    For automated deployment, I would use Continuous Integration and Continuous Deployment (CI/CD) pipelines with tools like Jenkins. Developers would 
+    push code changes to version control, triggering automated builds and deployments to the Kubernetes cluster. Helm charts or Kubernetes manifests 
+    would be used to define the application deployment configurations.                   
+
+5. Secure Access to Internal Systems: 
+    To securely access pre-existing internal systems on the "internal-assets" virtual network, I would set up a Virtual Private Network (VPN) between 
+    the Kubernetes cluster and the internal network. This ensures secure and private communication between the Kubernetes cluster and the internal 
+    systems without exposing them to the public internet. Additionally, I would configure Kubernetes network policies to restrict traffic within the 
+    cluster and enforce security controls.
+
